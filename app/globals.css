@@ -4,31 +4,36 @@
 
 @layer base {
   :root {
-    --background: 220 20% 97%;
-    --foreground: 222 47% 11%;
-    --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
-    --primary: 221 83% 53%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 210 40% 94%;
-    --secondary-foreground: 222 47% 11%;
-    --muted: 210 40% 94%;
-    --muted-foreground: 215 16% 47%;
-    --accent: 217 91% 60%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 214 32% 88%;
-    --input: 214 32% 88%;
-    --ring: 221 83% 53%;
-    --radius: 0.75rem;
-    --chart-1: 221 83% 53%;
-    --chart-2: 199 89% 48%;
-    --chart-3: 239 84% 67%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 27 87% 67%;
+    :root {
+      --background: 210 20% 98%;         /* soft clean white */
+      --foreground: 222 30% 15%;         /* softer black */
+
+      --card: 0 0% 100%;
+      --card-foreground: 222 30% 15%;
+
+      --popover: 0 0% 100%;
+      --popover-foreground: 222 30% 15%;
+
+      /* ✅ switch to emerald system */
+      --primary: 160 84% 39%;            /* emerald-500 */
+      --primary-foreground: 0 0% 100%;
+
+      --secondary: 160 30% 94%;          /* light green tint */
+      --secondary-foreground: 160 50% 20%;
+
+      --muted: 210 30% 95%;
+      --muted-foreground: 215 16% 40%;
+
+      --accent: 158 64% 52%;             /* emerald-400 */
+      --accent-foreground: 0 0% 100%;
+
+      --border: 210 20% 90%;
+      --input: 210 20% 90%;
+
+      --ring: 160 84% 39%;
+
+      --radius: 0.75rem;
+    }
   }
 
   .dark {
