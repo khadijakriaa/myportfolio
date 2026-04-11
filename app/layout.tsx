@@ -3,8 +3,8 @@ import type { Metadata } from 'next';
 import { ThemeProvider } from '@/components/theme-provider';
 
 export const metadata: Metadata = {
-  title: 'Khadija Kriaa — Data Engineer & AI/NLP Enthusiast',
-  description: 'Portfolio of Khadija Kriaa — 2nd-year Data & Decisional Systems Engineering student at ENET\'Com, passionate about SQL, Python, AI, and NLP.',
+  title: 'Khadija Kriaa — Data Engineer & AI Enthusiast',
+  description: 'Portfolio of Khadija Kriaa — 2nd-year Data & Decisional Systems Engineering student at ENET\'Com, passionate about AI, ML and NLP.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
