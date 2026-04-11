@@ -145,7 +145,7 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-slide-up delay-400">
             <button
                 onClick={scrollToAbout}
-                className="group relative px-8 py-3.5 rounded-xl  from-emerald-600 to-green-600 text-emerald-500 font-semibold text-base hover:scale-105 transition-all duration-300 overflow-hidden shadow-lg shadow-emerald-500/20"
+                className="group relative px-8 py-3.5 rounded-xl  from-emerald-600 to-green-600 text-emerald-400 font-semibold text-base hover:scale-105 transition-all duration-300 overflow-hidden shadow-lg shadow-emerald-500/20"
             >
             <span className="relative z-10 flex items-center gap-2">
               Get To Know Me
