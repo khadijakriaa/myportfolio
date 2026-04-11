@@ -59,8 +59,7 @@ export default function Hero() {
           className="relative min-h-screen flex items-center justify-center overflow-hidden"
       >
         {/* Animated Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-emerald-950/20 to-slate-950 dark:from-slate-950 dark:via-emerald-950/20 dark:to-slate-950" />
-
+        <div className="absolute inset-0 bg-gradient-to-br from-white via-emerald-50/40 to-white dark:from-slate-950 dark:via-emerald-950/20 dark:to-slate-950" />
         {/* Grid pattern */}
         <div className="absolute inset-0 grid-pattern opacity-40" />
 
