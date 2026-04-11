@@ -7,6 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "homepage": "https://khadijakriaa.github.io",
+
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
@@ -69,6 +71,6 @@
     "tailwindcss-animate": "^1.0.7",
     "typescript": "5.2.2",
     "vaul": "^0.9.9",
-    "zod": "^3.23.8",
-    "homepage": "https://khadijakriaa.github.io"  }
+    "zod": "^3.23.8"
+  }
 }
