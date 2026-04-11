@@ -13,7 +13,7 @@ const TECHNICAL_SKILLS = [
   { name: 'Spring Boot', category: 'Frameworks', color: '#f59e0b', ring: 1 },
   { name: 'Git / GitHub', category: 'Tools', color: '#a78bfa', ring: 0 },
   { name: 'OCR (Tesseract)', category: 'Tools', color: '#a78bfa', ring: 1 },
-  { name: 'REST APIs / JWT', category: 'Tools', category: 'Tools', color: '#a78bfa', ring: 0 },
+  { name: 'REST APIs / JWT', category: 'Tools', color: '#a78bfa', ring: 0 },
 ];
 
 const SOFT_SKILLS = [
