@@ -32,6 +32,14 @@ const EDUCATION = [
     location: 'Sfax, Tunisia',
     description: 'Intensive engineering program focused on data systems, decision support, AI, and software engineering. Curriculum covers advanced algorithms, databases, machine learning, and system architecture.',
   },
+  {
+    degree: 'Preparatory Cycle MP',
+    school: "FSS",
+    fullName: "Faculty of Sciences of Sfax",
+    period: '2022 — 2024',
+    location: 'Sfax, Tunisia',
+    description: 'Mathematics & Physics (MP) preparatory track for the National Engineering Entrance Competition (Concours National d\'Ingénieurs). Passed the national competition to qualify for elite engineering programs.',
+  },
 ];
 
 function TimelineItem({
