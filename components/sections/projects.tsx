@@ -58,19 +58,18 @@ const PROJECTS = [
     period: 'Academic Project · ML/NLP',
     company: 'ENET\'Com',
     description:
-        'A multi-modal intelligent agent that detects road situations in real time and generates natural language + voice alerts to assist drivers safely.',
+        'A hybrid multi-agent system that detects road situations in real time using VEINS simulator data and generates natural language + textual alerts to assist drivers safely.',
     longDesc:
-        'Combines computer vision (road detection), NLP (natural language generation), and TTS (text-to-speech) into a cohesive pipeline. Multiple independent ML systems collaborate to produce context-aware, actionable driving alerts.',
+        'Combines a reactive safety agent with a deliberative BDI agent for contextual reasoning, forming a true hybrid multi-agent architecture. Multiple independent ML agents (overtaking, intersection, dangerous zones) collaborate by feeding beliefs into the BDI layer, which generates context-aware alerts via natural language generation and text-to-speech.',
     icon: Car,
     color: 'text-emerald-400',
     glow: 'glow-green',
     gradient: 'from-emerald-500/20 to-teal-500/10',
     border: 'border-emerald-500/30',
-    tags: ['Python', 'ML', 'NLP', 'Computer Vision', 'TTS', 'Multi-agent System'],
+    tags: ['Python', 'ML', 'NLP'],
     highlights: [
       'Real-time road situation detection',
       'Natural language alert generation',
-      'Text-to-speech voice feedback',
       'Hybrid multi-agent architecture',
     ],
     links: [
