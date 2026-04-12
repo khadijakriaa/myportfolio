@@ -81,25 +81,6 @@ export default function Contact() {
 
         <div className="grid md:grid-cols-2 gap-8 items-start">
           {/* Left: Quick info */}
-          <div className="reveal-left space-y-6">
-            <div className="p-6 rounded-2xl bg-card border border-border">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center">
-                  <MessageCircle className="w-5 h-5 text-emerald-400" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-foreground">Open to Opportunities</h3>
-                  <p className="text-xs text-muted-foreground">Internships, research, collaborations</p>
-                </div>
-              </div>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                I'm currently a 2nd-year engineering student actively looking for internships and projects
-                in <span className="text-emerald-400">Data Engineering</span>,{' '}
-                <span className="text-teal-400">AI/NLP</span>, and{' '}
-                <span className="text-green-400">Machine Learning</span>.
-              </p>
-            </div>
-
             <div className="p-5 rounded-2xl bg-card border border-border flex items-center gap-4">
               <div className="w-10 h-10 rounded-xl bg-green-500/10 border border-green-500/20 flex items-center justify-center">
                 <MapPin className="w-5 h-5 text-green-400" />
