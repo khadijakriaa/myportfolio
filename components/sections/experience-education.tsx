@@ -31,14 +31,6 @@ const EDUCATION = [
     year: '2nd Year',
     location: 'Sfax, Tunisia',
     description: 'Intensive engineering program focused on data systems, decision support, AI, and software engineering. Curriculum covers advanced algorithms, databases, machine learning, and system architecture.',
-    courses: [
-      'Machine Learning & Deep Learning',
-      'Natural Language Processing',
-      'Database Systems & Data Warehousing',
-      'Software Engineering',
-      'Algorithms & Data Structures',
-      'Statistics & Probability',
-    ],
   },
 ];
 
@@ -205,7 +197,7 @@ export default function ExperienceEducation() {
                 location={edu.location}
                 badge={edu.year}
                 description={edu.description}
-                items={edu.courses}
+                items={[]} // No specific achievements listed for education
                 align="right"
               />
             ))}
