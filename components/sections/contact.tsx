@@ -87,10 +87,14 @@ export default function Contact() {
                 <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center">
                   <MessageCircle className="w-5 h-5 text-emerald-400" />
                 </div>
+                <div>
+                  <h3 className="font-bold text-foreground">Open to Opportunities</h3>
+                  <p className="text-xs text-muted-foreground">Internships, research, collaborations</p>
+                </div>
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 I'm currently a 2nd-year engineering student actively looking for internships and projects
-                    to apply my skills and grow as a developer. Feel free to reach out if you have any opportunities or just want to chat about tech!
+                to apply my skills and grow. If you have an opportunity or just want to chat, feel free to reach out!
               </p>
             </div>
 
