@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: 'Portfolio of Khadija Kriaa — 2nd-year Data & Decisional Systems Engineering student at ENET\'Com, passionate about AI, ML and NLP.',
     icons: {
         icon: [
-            { url: "public/favicon.png", type: "image/png" },
+            { url: "/favicon.png", type: "image/png" },
         ],
     },
 };
