@@ -5,11 +5,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 export const metadata: Metadata = {
   title: 'Khadija Kriaa | Portfolio',
   description: 'Portfolio of Khadija Kriaa — 2nd-year Data & Decisional Systems Engineering student at ENET\'Com, passionate about AI, ML and NLP.',
-    icons: {
-        icon: [
-            { url: "/favicon.png", type: "image/png" },
-        ],
-    },
+    icons: '/favicon.png'
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
