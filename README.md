@@ -259,5 +259,3 @@ This portfolio is open source. Feel free to fork, modify, and use as inspiration
 - **GitHub**: [@khadijakriaa](https://github.com/khadijakriaa)
 
 ---
-
-**Built with ❤️ by Khadija Kriaa**
