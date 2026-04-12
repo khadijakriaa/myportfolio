@@ -30,7 +30,8 @@ const EDUCATION = [
     period: '2024 — Present',
     year: '2nd Year',
     location: 'Sfax, Tunisia',
-    description: 'Intensive engineering program focused on data systems, decision support, AI, and software engineering. Curriculum covers advanced algorithms, databases, machine learning, and system architecture.',
+    description: 'Intensive engineering program focused on data systems, decision support, AI, and software engineering.' +
+        ' Curriculum covers advanced algorithms, databases, machine learning, and system architecture.',
   },
   {
     degree: 'Preparatory Cycle MP',
