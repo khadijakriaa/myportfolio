@@ -77,10 +77,6 @@ export default function Contact() {
           <h2 className="text-4xl md:text-5xl font-black section-title mb-4">
             Get In <span className="text-emerald-500">Touch</span>
           </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto leading-relaxed">
-            I'm always open to new opportunities, collaborations, or just a great conversation about AI and data.
-            Feel free to reach out!
-          </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 items-start">
