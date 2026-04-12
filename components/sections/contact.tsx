@@ -80,7 +80,7 @@ export default function Contact() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 items-start">
-          {/* Left: Quick info */}
+          <div className="reveal-left space-y-6">
             <div className="p-5 rounded-2xl bg-card border border-border flex items-center gap-4">
               <div className="w-10 h-10 rounded-xl bg-green-500/10 border border-green-500/20 flex items-center justify-center">
                 <MapPin className="w-5 h-5 text-green-400" />
