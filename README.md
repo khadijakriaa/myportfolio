@@ -94,8 +94,8 @@ Three featured projects with:
   - MARBERT, Hugging Face, Sentiment Analysis
   - Demo, GitHub, Model links
 
-- **Hybrid Agent for Driving Assistance** (ML/NLP)
-  - Road detection, NLP alerts, TTS, multi-agent system
+- **Hybrid Agent for Driving Assistance** (ML/AI)
+  - Road detection, multi-agent system
   - GitHub link
 
 ### 4. **Skills**
@@ -104,7 +104,6 @@ Three featured projects with:
   - AI/ML (ML, Hugging Face, scikit-learn)
   - Frameworks (Angular, Spring Boot)
   - Tools (Git, Tesseract, REST APIs)
-  - Animated progress bars
 
 - **Soft Skills**: Circular progress indicators
   - Problem Solving, Analytical Thinking, Creativity, Collaboration, Time Management
@@ -118,74 +117,13 @@ Three featured projects with:
 
 ### 6. **Education**
 - **ENET'Com — Data & Decisional Systems Engineering** (2nd Year)
-  - Course list (ML, NLP, Databases, Software Engineering, etc.)
-
 ### 7. **Contact**
 - Email, LinkedIn, GitHub cards with glow effects
 - Quick-send CTA button
 - Availability indicator
 - Professional tone
 
-### 8. **Creative Showcase**
-- **3D Floating Project Cards**: Hover-to-tilt effect
-- **Floating Tech Icons Universe**: Reveal labels on hover
-- **Live Sentiment Demo**: Input text → predict sentiment with confidence
 
-## Getting Started
-
-### Prerequisites
-- Node.js 18+ and npm/yarn
-- Basic knowledge of Next.js and React
-
-### Installation
-
-1. **Clone the repository** (or download the project)
-   ```bash
-   cd project
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Run the development server**
-   ```bash
-   npm run dev
-   ```
-   Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-4. **Build for production**
-   ```bash
-   npm run build
-   npm run start
-   ```
-
-## Customization
-
-### Changing Content
-
-1. **Hero Section** (`components/sections/hero.tsx`)
-   - Modify `TAGLINES` array for rotating taglines
-   - Update description text
-   - Change CTA button actions
-
-2. **Projects** (`components/sections/projects.tsx`)
-   - Edit `PROJECTS` array to add/remove projects
-   - Update project details, links, tags
-
-3. **Skills** (`components/sections/skills.tsx`)
-   - Modify `TECHNICAL_SKILLS` and `SOFT_SKILLS` arrays
-   - Update skill names and levels
-   - Add/remove skill categories
-
-4. **Experience & Education** (`components/sections/experience-education.tsx`)
-   - Edit `EXPERIENCE` and `EDUCATION` arrays
-   - Update achievements, courses, dates
-
-5. **Contact** (`components/sections/contact.tsx`)
-   - Update email, LinkedIn, GitHub links
-   - Modify contact cards
 
 ### Styling
 
@@ -202,60 +140,5 @@ Three featured projects with:
 
 4. **Tailwind Config**: `tailwind.config.ts`
    - Customize colors, spacing, breakpoints
-
-## Deployment
-
-### Vercel (Recommended)
-
-```bash
-npm i -g vercel
-vercel
-```
-
-Follow prompts to deploy. Your site will be live in minutes.
-
-### Netlify
-
-```bash
-npm i -D @netlify/cli
-netlify deploy --prod --dir=.next
-```
-
-### Static Hosting
-
-The project generates static HTML by default. Deploy the `.next` directory to any static host (GitHub Pages, Cloudflare Pages, etc.).
-
-## Browser Support
-
-- Chrome/Edge (latest)
-- Firefox (latest)
-- Safari (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
-
-## Performance Tips
-
-1. Images are optimized with Next.js Image component
-2. CSS is minified and purged of unused styles
-3. JavaScript is code-split and lazy-loaded
-4. Intersection Observer for scroll-triggered animations
-5. Static generation for fast initial loads
-
-## Accessibility
-
-- Semantic HTML
-- ARIA labels where needed
-- Keyboard navigation support
-- Color contrast ratios meet WCAG AA
-- Reduced motion support (respects `prefers-reduced-motion`)
-
-## License
-
-This portfolio is open source. Feel free to fork, modify, and use as inspiration for your own!
-
-## Contact
-
-- **Email**: kriaakhadija784@gmail.com
-- **LinkedIn**: [Khadija Kriaa](https://www.linkedin.com/in/khadija-kriaa-579608334/)
-- **GitHub**: [@khadijakriaa](https://github.com/khadijakriaa)
 
 ---
