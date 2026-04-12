@@ -6,7 +6,7 @@ import { ChevronDown, Sparkles, Zap, Code, Cpu, Database } from 'lucide-react';
 const TAGLINES = [
   'Data Engineering Student',
   'AI & NLP Enthusiast',
-  'Building Intelligent Systems',
+  'Turning Data into Insights',
 ];
 
 const PARTICLES = Array.from({ length: 18 }, (_, i) => ({
@@ -137,7 +137,7 @@ export default function Hero() {
             </div>
             <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/5 border border-emerald-500/10">
               <Code className="w-4 h-4 text-green-400" />
-              <span className="text-sm text-green-300">5+ Projects</span>
+              <span className="text-sm text-green-300">3+ Projects</span>
             </div>
           </div>
 
@@ -159,18 +159,6 @@ export default function Hero() {
             >
               Get In Touch
             </a>
-          </div>
-
-          {/* Tech stack pills with better styling */}
-          <div className="flex flex-wrap items-center justify-center gap-2 mt-12 animate-slide-up delay-600">
-            {['Python', 'SQL', 'NLP', 'Machine Learning', 'Angular', 'Spring Boot'].map((tech) => (
-                <span
-                    key={tech}
-                    className="px-3 py-1.5 text-xs font-mono bg-emerald-500/10 border border-emerald-500/20 rounded-lg text-emerald-300 hover:bg-emerald-500/20 hover:border-emerald-500/40 hover:scale-105 transition-all duration-200 cursor-default"
-                >
-              {tech}
-            </span>
-            ))}
           </div>
         </div>
       </section>
