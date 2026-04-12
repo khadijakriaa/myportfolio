@@ -55,6 +55,11 @@ export default function Home() {
       <div className="h-px bg-gradient-to-r from-transparent via-emerald-400/15 to-transparent mx-8" />
 
       <Contact />
+        <section className="py-20 flex justify-center">
+            <p className="max-w-2xl text-center italic text-muted-foreground text-lg">
+                “If you understand time, you're on your way to understanding reality.”
+            </p>
+        </section>
     </main>
   );
 }
