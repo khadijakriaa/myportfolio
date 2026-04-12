@@ -66,7 +66,7 @@ const PROJECTS = [
     glow: 'glow-green',
     gradient: 'from-emerald-500/20 to-teal-500/10',
     border: 'border-emerald-500/30',
-    tags: ['Python', 'ML', 'NLP'],
+    tags: ['Python', 'ML', 'Hybrid Multi-Agent', 'BDI Agents'],
     highlights: [
       'Real-time road situation detection',
       'Natural language alert generation',
