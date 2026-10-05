@@ -1,7 +1,9 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import Image from 'next/image';
 import { Brain, Code as Code2, Database, Guitar, BookOpen, Film, Lightbulb, Cpu } from 'lucide-react';
+import EnetLink from '@/components/enet-link';
 
 const STATS = [
   { label: 'Projects Completed', value: '5+' },
@@ -66,8 +68,15 @@ export default function About() {
           <div className="reveal-left space-y-6">
             {/* Avatar / Visual */}
             <div className="relative w-fit mx-auto lg:mx-0">
-              <div className="w-48 h-48 rounded-2xl bg-emerald-500 flex items-center justify-center animate-morph">
-                <div className="text-white font-black text-5xl font-poppins">Khadija</div>
+              <div className="w-48 h-48 rounded-2xl overflow-hidden bg-emerald-500 border border-emerald-500/30">
+                <Image
+                  src="/pdp-linkedin.png"
+                  alt="Khadija Kriaa"
+                  width={192}
+                  height={192}
+                  className="w-full h-full object-cover"
+                  priority
+                />
               </div>
               <div className="absolute -top-3 -right-3 w-10 h-10 bg-emerald-400 rounded-lg flex items-center justify-center animate-float">
                 <Brain className="w-5 h-5 text-white" />
@@ -84,7 +93,7 @@ export default function About() {
               <p className="text-muted-foreground leading-relaxed">
                 I'm a final-year{' '}
                 <span className="text-foreground font-medium">Data Engineering &amp; Decision Systems (IDSD)</span>{' '}
-                student at <span className="text-emerald-400 font-medium">ENET'Com</span>, Sfax, specialising in{' '}
+                student at <EnetLink className="text-emerald-400 font-medium" />, Sfax, specialising in{' '}
                 <span className="text-emerald-400 font-medium">Data Science</span>. I&rsquo;m now looking for a 6-month
                 end-of-studies internship (PFE) starting February 2027.
               </p>

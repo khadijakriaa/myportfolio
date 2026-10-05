@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import { Mail, Linkedin, Github, ExternalLink, Send, MapPin, MessageCircle } from 'lucide-react';
+import EnetLink from '@/components/enet-link';
 
 const CONTACT_LINKS = [
   {
@@ -93,7 +94,8 @@ export default function Contact() {
                 </div>
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                I&rsquo;m a final-year Data Engineering &amp; Decision Systems student at ENET&rsquo;Com,
+                I&rsquo;m a final-year Data Engineering &amp; Decision Systems student at{' '}
+                <EnetLink className="text-emerald-400 font-medium" />,
                 specialising in Data Science. I&rsquo;m looking for a 6-month end-of-studies
                 internship (PFE) starting February 2027. If you have an opportunity or just want to
                 chat, feel free to reach out!

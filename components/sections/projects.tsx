@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import { ExternalLink, Github, Globe, FileText, Brain, Car, Tag, Network } from 'lucide-react';
+import EnetLink, { ENETCOM_URL } from '@/components/enet-link';
 
 const PROJECTS = [
   {
@@ -80,6 +81,7 @@ const PROJECTS = [
     title: 'Hybrid Agent for Driving Assistance',
     period: 'Academic Project · ML/NLP',
     company: 'ENET\'Com',
+    companyUrl: ENETCOM_URL,
     description:
         'A hybrid multi-agent system that detects road situations in real time using VEINS simulator data and generates natural language + textual alerts to assist drivers safely.',
     longDesc:
@@ -162,7 +164,18 @@ export default function Projects() {
                             <span className={`text-xs font-medium px-2 py-0.5 rounded-full bg-green-500/10 border border-green-500/20 ${project.color}`}>
                               {project.period}
                             </span>
-                                <span className="text-xs text-muted-foreground">{project.company}</span>
+                                <span className="text-xs text-muted-foreground">
+                                  {project.companyUrl ? (
+                                    <EnetLink
+                                      href={project.companyUrl}
+                                      className="text-muted-foreground hover:text-emerald-300"
+                                    >
+                                      {project.company}
+                                    </EnetLink>
+                                  ) : (
+                                    project.company
+                                  )}
+                                </span>
                               </div>
                               <h3 className="text-xl font-bold text-foreground group-hover:text-gradient transition-all">
                                 {project.title}

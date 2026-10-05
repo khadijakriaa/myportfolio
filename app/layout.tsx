@@ -4,7 +4,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 
 export const metadata: Metadata = {
     title: 'Khadija Kriaa | Portfolio',
-    description: 'Portfolio of Khadija Kriaa — 2nd-year Data & Decisional Systems Engineering student at ENET\'Com, passionate about AI, ML and NLP.',
+    description: 'Portfolio of Khadija Kriaa — Data & Decisional Systems Engineering student at ENET\'Com, specialising in Data Science. Building LLM, RAG and agentic AI applications.',
     // Use relative path for static export
     icons: {
         icon: './favicon.png', // Note the ./ prefix

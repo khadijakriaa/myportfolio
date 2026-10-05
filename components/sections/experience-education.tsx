@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import { Briefcase, GraduationCap, MapPin, Calendar, CircleCheck as CheckCircle } from 'lucide-react';
+import EnetLink, { ENETCOM_URL } from '@/components/enet-link';
 
 const EXPERIENCE = [
   {
@@ -57,6 +58,7 @@ const EDUCATION = [
   {
     degree: 'Engineering Degree — Data Engineering & Decision Systems (IDSD)',
     school: "ENET'Com",
+    schoolUrl: ENETCOM_URL,
     fullName: "Ecole Nationale d'Electronique et des Telecommunications de Sfax",
     period: 'Sept. 2024 — May 2027',
     year: '3rd & Final Year',
@@ -80,6 +82,7 @@ function TimelineItem({
   icon: Icon,
   title,
   subtitle,
+  subtitleUrl,
   period,
   location,
   badge,
@@ -91,6 +94,7 @@ function TimelineItem({
   icon: React.ElementType;
   title: string;
   subtitle: string;
+  subtitleUrl?: string;
   period: string;
   location: string;
   badge: string;
@@ -122,7 +126,13 @@ function TimelineItem({
                 </span>
               </div>
               <h3 className="text-lg font-bold text-foreground group-hover:text-gradient transition-all">{title}</h3>
-              <p className="text-emerald-400 font-semibold text-sm">{subtitle}</p>
+              {subtitleUrl ? (
+                <EnetLink href={subtitleUrl} className="text-emerald-400 font-semibold text-sm">
+                  {subtitle}
+                </EnetLink>
+              ) : (
+                <p className="text-emerald-400 font-semibold text-sm">{subtitle}</p>
+              )}
             </div>
             <div className="flex flex-col items-end gap-1 text-xs text-muted-foreground">
               <span className="flex items-center gap-1.5">
@@ -235,6 +245,7 @@ export default function ExperienceEducation() {
                 icon={GraduationCap}
                 title={edu.degree}
                 subtitle={`${edu.school} — ${edu.fullName}`}
+                subtitleUrl={edu.schoolUrl}
                 period={edu.period}
                 location={edu.location}
                 badge={edu.year}
