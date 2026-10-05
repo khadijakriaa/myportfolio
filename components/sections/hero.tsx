@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { ChevronDown, Sparkles, Zap, Code, Cpu, Database } from 'lucide-react';
-import EnetLink from '@/components/enet-link';
+import SiteLink from '@/components/site-link';
 
 const TAGLINES = [
   'AI Engineering Student',
@@ -123,7 +123,7 @@ export default function Hero() {
           {/* Description with tech icons */}
           <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto mb-10 animate-slide-up delay-300 leading-relaxed">
             <span className="text-emerald-400 font-medium">Data Engineering &amp; Decision Systems</span>{' '}
-            student at <EnetLink className="text-emerald-400 font-medium" />, specialising in{' '}
+            student at <SiteLink className="text-emerald-400 font-medium" />, specialising in{' '}
             <span className="text-emerald-400 font-medium">Data Science</span>
           </p>
 

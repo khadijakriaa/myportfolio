@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import { ExternalLink, Github, Brain, Car, Tag } from 'lucide-react';
-import EnetLink, { ENETCOM_URL } from '@/components/enet-link';
+import SiteLink, { ENETCOM_URL } from '@/components/site-link';
 
 const PROJECTS = [
   {
@@ -120,12 +120,12 @@ export default function Projects() {
                             </span>
                                 <span className="text-xs text-muted-foreground">
                                   {project.companyUrl ? (
-                                    <EnetLink
+                                    <SiteLink
                                       href={project.companyUrl}
                                       className="text-muted-foreground hover:text-emerald-300"
                                     >
                                       {project.company}
-                                    </EnetLink>
+                                    </SiteLink>
                                   ) : (
                                     project.company
                                   )}

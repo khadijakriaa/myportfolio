@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import { Briefcase, GraduationCap, MapPin, Calendar, CircleCheck as CheckCircle, Github, ExternalLink } from 'lucide-react';
-import EnetLink, { ENETCOM_URL } from '@/components/enet-link';
+import SiteLink, { ENETCOM_URL, FSS_URL } from '@/components/site-link';
 
 const EXPERIENCE = [
   {
@@ -75,6 +75,7 @@ const EDUCATION = [
   {
     degree: 'Preparatory Cycle — Mathematics & Physics (MP)',
     school: "FSS",
+    schoolUrl: FSS_URL,
     fullName: "Faculty of Sciences of Sfax",
     period: 'Sept. 2022 — June 2024',
     year: '2 years',
@@ -135,9 +136,9 @@ function TimelineItem({
               </div>
               <h3 className="text-lg font-bold text-foreground group-hover:text-gradient transition-all">{title}</h3>
               {subtitleUrl ? (
-                <EnetLink href={subtitleUrl} className="text-emerald-400 font-semibold text-sm">
+                <SiteLink href={subtitleUrl} className="text-emerald-400 font-semibold text-sm">
                   {subtitle}
-                </EnetLink>
+                </SiteLink>
               ) : (
                 <p className="text-emerald-400 font-semibold text-sm">{subtitle}</p>
               )}

@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { Brain, Code as Code2, Database, Guitar, BookOpen, Film, Lightbulb, Cpu } from 'lucide-react';
-import EnetLink from '@/components/enet-link';
+import SiteLink from '@/components/site-link';
 
 const STATS = [
   { label: 'Projects Completed', value: '5+' },
@@ -93,7 +93,7 @@ export default function About() {
               <p className="text-muted-foreground leading-relaxed">
                 I'm a final-year{' '}
                 <span className="text-foreground font-medium">Data Engineering &amp; Decision Systems (IDSD)</span>{' '}
-                student at <EnetLink className="text-emerald-400 font-medium" />, Sfax, specialising in{' '}
+                student at <SiteLink className="text-emerald-400 font-medium" />, Sfax, specialising in{' '}
                 <span className="text-emerald-400 font-medium">Data Science</span>. I&rsquo;m now looking for a 6-month
                 end-of-studies internship (PFE) starting February 2027.
               </p>

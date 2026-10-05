@@ -1,8 +1,9 @@
 import type { ReactNode } from 'react';
 
 export const ENETCOM_URL = 'https://enetcom.rnu.tn/fr';
+export const FSS_URL = 'https://fss.rnu.tn/';
 
-export default function EnetLink({
+export default function SiteLink({
   children = 'ENET’Com',
   href = ENETCOM_URL,
   className = '',
