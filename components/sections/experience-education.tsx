@@ -5,42 +5,74 @@ import { Briefcase, GraduationCap, MapPin, Calendar, CircleCheck as CheckCircle 
 
 const EXPERIENCE = [
   {
-    role: 'Data and Decisional Systems Engineering Intern',
+    role: 'AI & Data Intern — RAG, LLM & Agentic AI',
+    company: 'Union Internationale de Banques (UIB)',
+    period: 'August 2026',
+    location: 'Tunisia',
+    type: 'Internship',
+    description: 'Built an internal assistant that lets staff query banking circulars in natural language, grounded in retrieved source documents with full answer traceability.',
+    achievements: [
+      'Developed a Python RAG pipeline covering PDF extraction, chunking, embeddings, retrieval and LLM generation',
+      'Orchestrated the pipeline with LangGraph for agentic control flow',
+      'Implemented hybrid retrieval combining BGE-M3, BM25 and Qdrant, fused with Reciprocal Rank Fusion (RRF)',
+      'Evaluated retrieval quality with MRR and Recall@K',
+      'Built a Streamlit interface surfacing the sources used for every generated answer',
+    ],
+    tags: ['Python', 'LLM', 'RAG', 'LangGraph', 'Qdrant', 'BGE-M3', 'BM25', 'RRF', 'Streamlit'],
+  },
+  {
+    role: 'Data Science Intern — Data Pipelines & Predictive Modeling',
+    company: 'Société Tunisienne de Banque (STB)',
+    period: 'June — July 2026',
+    location: 'Tunisia',
+    type: 'Internship',
+    description: 'Built reproducible predictive modeling pipelines over more than 16,000 real-estate observations, covering preprocessing, feature engineering and systematic model comparison.',
+    achievements: [
+      'Collected, cleaned and analyzed 16,000+ real-estate observations using Python, Pandas and NumPy',
+      'Performed preprocessing and feature engineering on the dataset',
+      'Built reproducible pipelines with Scikit-learn Pipeline, ColumnTransformer and RobustScaler',
+      'Compared and optimized models including XGBoost and LightGBM',
+      'Applied cross-validation and RandomizedSearchCV for hyperparameter tuning',
+    ],
+    tags: ['Python', 'Pandas', 'NumPy', 'Scikit-learn', 'XGBoost', 'LightGBM', 'Data Pipelines'],
+  },
+  {
+    role: 'Software & AI Intern — Back-End, REST APIs & Document Processing',
     company: 'Coconsult Nearshore',
     period: 'July 2025',
     location: 'Tunisia',
     type: 'Internship',
-    description: 'Built a secure, full-stack web application for automated data extraction from financial documents (pay slips) using OCR and NLP technologies.',
+    description: 'Built a document processing platform combining Tesseract OCR with the Cohere API to extract and structure information from PDFs and images.',
     achievements: [
-      'Developed Angular frontend with interactive dashboard for visualizing extracted data',
-      'Implemented Spring Boot REST API with JWT authentication and role-based access control',
-      'Integrated Tesseract OCR for text extraction from PDF/image pay slips',
-      'Applied Cohere NLP API to transform unstructured text into structured JSON',
-      'Designed and optimized PostgreSQL database schema for extracted payroll data',
+      'Combined Tesseract OCR and the Cohere API to extract and structure data from PDF and image documents',
+      'Developed REST APIs with Spring Boot and designed the relational storage layer under PostgreSQL',
+      'Integrated JWT-based authentication with Spring Security for secure data exchange',
+      'Contributed to the development of the Angular frontend',
     ],
-    tags: ['Angular', 'Spring Boot', 'PostgreSQL', 'OCR', 'NLP', 'JWT'],
+    tags: ['Spring Boot', 'PostgreSQL', 'Angular', 'Tesseract OCR', 'Cohere API', 'JWT', 'Spring Security'],
   },
 ];
 
 const EDUCATION = [
   {
-    degree: 'Engineering Degree — Data & Decisional Systems',
+    degree: 'Engineering Degree — Data Engineering & Decision Systems (IDSD)',
     school: "ENET'Com",
-    fullName: "Ecole Nationale d'Ingénieurs des Télécommunications de Tunis",
-    period: '2024 — Present',
-    year: '2nd Year',
+    fullName: "Ecole Nationale d'Electronique et des Telecommunications de Sfax",
+    period: 'Sept. 2024 — May 2027',
+    year: '3rd & Final Year',
     location: 'Sfax, Tunisia',
-    description: 'Intensive engineering program focused on data systems, decision support, AI, and software engineering.' +
-        ' Curriculum covers advanced algorithms, databases, machine learning, and system architecture.',
+    description: 'Final-year engineering programme specialising in Data Science. Curriculum covers advanced algorithms, ' +
+        'databases, machine learning, AI engineering, and system architecture.',
   },
   {
-    degree: 'Preparatory Cycle MP',
+    degree: 'Preparatory Cycle — Mathematics & Physics (MP)',
     school: "FSS",
     fullName: "Faculty of Sciences of Sfax",
-    period: '2 years',
-    year: '2022 — 2024',
+    period: 'Sept. 2022 — June 2024',
+    year: '2 years',
     location: 'Sfax, Tunisia',
-    description: 'Mathematics & Physics (MP) preparatory track for the National Engineering Entrance Competition (Concours National d\'Ingénieurs). Passed the national competition to qualify for elite engineering programs.',
+    description: 'Mathematics & Physics (MP) preparatory track for the National Engineering Entrance Competition ' +
+        '(Concours National d\'Ingenieurs). Passed the national competition to qualify for elite engineering programmes.',
   },
 ];
 

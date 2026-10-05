@@ -1,18 +1,41 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import { ExternalLink, Github, Globe, FileText, Brain, Car, Tag } from 'lucide-react';
+import { ExternalLink, Github, Globe, FileText, Brain, Car, Tag, Network } from 'lucide-react';
 
 const PROJECTS = [
   {
+    id: 4,
+    title: 'RAG Assistant for Banking Circulars',
+    period: 'Internship · August 2026',
+    company: 'Union Internationale de Banques',
+    description:
+        'An internal assistant that answers questions about banking circulars in natural language, grounded in retrieved source documents with full traceability.',
+    longDesc:
+        'A production-style RAG pipeline in Python — PDF extraction, chunking, embeddings, retrieval and LLM generation — orchestrated with LangGraph. Retrieval is hybrid: dense vectors from BGE-M3 combined with BM25 lexical search over Qdrant, fused with Reciprocal Rank Fusion. Retrieval quality is measured with MRR and Recall@K rather than eyeballed, and a Streamlit interface surfaces the exact sources behind every generated answer.',
+    icon: Network,
+    color: 'text-emerald-400',
+    glow: 'glow-green',
+    gradient: 'from-emerald-500/20 to-teal-500/10',
+    border: 'border-emerald-500/30',
+    tags: ['Python', 'LLM', 'RAG', 'LangGraph', 'Qdrant', 'BGE-M3', 'BM25', 'RRF', 'Streamlit'],
+    highlights: [
+      'Hybrid dense + lexical retrieval fused with RRF',
+      'Agentic orchestration with LangGraph',
+      'Retrieval evaluated with MRR and Recall@K',
+      'Streamlit UI with per-answer source traceability',
+    ],
+    links: [],
+  },
+  {
     id: 1,
-    title: 'Web App for File Upload & Data Extraction',
+    title: 'Document Processing & Extraction Platform',
     period: 'Internship · July 2025',
     company: 'Coconsult Nearshore',
     description:
-        'A secure, full-stack web application that automates extraction of structured data from pay slips using OCR and NLP. Generates interactive dashboards from unstructured document content.',
+        'A secure, full-stack platform that extracts structured data from financial documents using OCR and NLP, and turns unstructured content into interactive dashboards.',
     longDesc:
-        'Built with a microservices mindset — Angular frontend, Spring Boot REST API, PostgreSQL storage, and Tesseract OCR for text recognition. Integrated Cohere API for NLP post-processing of extracted text into structured JSON. JWT-based authentication ensures data security.',
+        'Built with a microservices mindset — Angular frontend, Spring Boot REST API, PostgreSQL storage, and Tesseract OCR for text recognition. Integrated the Cohere API for NLP post-processing of extracted text into structured JSON. JWT-based authentication with Spring Security ensures data security.',
     icon: FileText,
     color: 'text-emerald-400',
     glow: 'glow-green',
@@ -20,7 +43,7 @@ const PROJECTS = [
     border: 'border-emerald-500/30',
     tags: ['Angular', 'Spring Boot', 'PostgreSQL', 'Tesseract OCR', 'Cohere API', 'JWT', 'NLP'],
     highlights: [
-      'Automated OCR-based text extraction from pay slips',
+      'Automated OCR-based text extraction from PDFs and images',
       'NLP pipeline for unstructured → structured JSON',
       'JWT-secured REST API with role-based access',
       'Interactive analytics dashboard',
@@ -33,9 +56,9 @@ const PROJECTS = [
     period: 'Academic Project · NLP/ML',
     company: 'Personal Research',
     description:
-        'A sentiment analysis model trained on Tunisian Arabic dialect text using MARBERT. Fine-tuned on Hugging Face and deployed as an interactive demo space.',
+        'A sentiment analysis model fine-tuned on nearly 50,000 Tunisian Arabic dialect texts using MARBERT, deployed as an interactive demo space.',
     longDesc:
-        'Applied transfer learning with MARBERT (Arabic BERT) for dialect-specific sentiment analysis. The model classifies text into positive/negative/neutral sentiments, handling code-switching between Arabic, French, and Tunisian dialect.',
+        'Built the full NLP pipeline — preprocessing, tokenization, classification and F1-score evaluation — around MARBERT (Arabic BERT) via transfer learning on Hugging Face. The model classifies text into positive/negative/neutral sentiments, handling code-switching between Arabic, French, and Tunisian dialect.',
     icon: Brain,
     color: 'text-emerald-400',
     glow: 'glow-green',
@@ -43,10 +66,10 @@ const PROJECTS = [
     border: 'border-emerald-500/30',
     tags: ['Python', 'ML', 'NLP', 'MARBERT', 'Hugging Face', 'Sentiment Analysis', 'Arabic NLP'],
     highlights: [
-      'Fine-tuned MARBERT on Tunisian dialect corpus',
+      'Fine-tuned MARBERT on ~50,000 Tunisian dialect texts',
       'Multi-class sentiment classification',
       'Handles Arabic-French code-switching',
-      'Deployed as Hugging Face Space',
+      'Evaluated with F1-score',
     ],
     links: [
       { label: 'GitHub', icon: Github, href: 'https://github.com/Adeeem2/Tunisian-dialect-classification.git' },

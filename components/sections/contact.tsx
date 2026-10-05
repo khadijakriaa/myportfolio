@@ -93,8 +93,10 @@ export default function Contact() {
                 </div>
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                I'm currently a 2nd-year engineering student actively looking for internships and projects
-                to apply my skills and grow. If you have an opportunity or just want to chat, feel free to reach out!
+                I&rsquo;m a final-year Data Engineering &amp; Decision Systems student at ENET&rsquo;Com,
+                specialising in Data Science. I&rsquo;m looking for a 6-month end-of-studies
+                internship (PFE) starting February 2027. If you have an opportunity or just want to
+                chat, feel free to reach out!
               </p>
             </div>
 

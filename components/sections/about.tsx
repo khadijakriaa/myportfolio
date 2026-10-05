@@ -14,14 +14,14 @@ const INTERESTS = [
   { icon: Guitar, label: 'Guitar', color: 'text-amber-300', bg: 'bg-amber-400/10 border-amber-400/20' },
   { icon: BookOpen, label: 'Tech & Self-improvement Books', color: 'text-emerald-400', bg: 'bg-emerald-400/10 border-emerald-400/20' },
   { icon: Film, label: 'Sci-fi & Music-inspired Series', color: 'text-green-400', bg: 'bg-green-400/10 border-green-400/20' },
-  { icon: Cpu, label: 'AI Research', color: 'text-teal-400', bg: 'bg-teal-400/10 border-teal-400/20' },
+  { icon: Cpu, label: 'Agentic AI', color: 'text-teal-400', bg: 'bg-teal-400/10 border-teal-400/20' },
 ];
 
 const PASSIONS = [
-  { icon: Brain, label: 'Artificial Intelligence', desc: 'Building intelligent systems that learn' },
-  { icon: Database, label: 'Data Engineering', desc: 'Transforming raw data into insights' },
-  { icon: Code2, label: 'Software Development', desc: 'Clean, maintainable, scalable code' },
-  { icon: Lightbulb, label: 'NLP Research', desc: 'Understanding human language with machines' },
+  { icon: Brain, label: 'AI Engineering', desc: 'LLM applications and agentic orchestration' },
+  { icon: Database, label: 'Data Science', desc: 'Pipelines, features and predictive models' },
+  { icon: Code2, label: 'Software Reliability', desc: 'Clean, maintainable, testable code' },
+  { icon: Lightbulb, label: 'RAG & Vector Search', desc: 'Hybrid retrieval and evaluation' },
 ];
 
 export default function About() {
@@ -82,19 +82,20 @@ export default function About() {
                 Hi, I'm <span>Khadija Kriaa</span>
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                I'm a 2nd-year{' '}
-                <span className="text-foreground font-medium">Data & Decisional Systems Engineering</span>{' '}
-                student at <span className="text-emerald-400 font-medium">ENET'Com</span>, Tunisia. I thrive at
-                the intersection of data, intelligence, and innovation — building systems that turn raw information
-                into meaningful decisions.
+                I'm a final-year{' '}
+                <span className="text-foreground font-medium">Data Engineering &amp; Decision Systems (IDSD)</span>{' '}
+                student at <span className="text-emerald-400 font-medium">ENET'Com</span>, Sfax, specialising in{' '}
+                <span className="text-emerald-400 font-medium">Data Science</span>. I&rsquo;m now looking for a 6-month
+                end-of-studies internship (PFE) starting February 2027.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                My passion lies in{' '}
-                <span className="text-emrald-400 font-medium">Artificial Intelligence</span> ,{' '}
-                <span className="text-emrald-400 font-medium">Natural Language Processing</span>,{' '}
-                and{' '}<span className="text-emrald-400 font-medium">Machine Learning</span> .
-                I'm driven by curiosity and a love for
-                solving complex, real-world problems.
+                My work sits at the intersection of AI engineering and software craft — I build{' '}
+                <span className="text-emerald-400 font-medium">LLM applications</span> with{' '}
+                <span className="text-emerald-400 font-medium">RAG pipelines</span> and{' '}
+                <span className="text-emerald-400 font-medium">agentic orchestration</span> in Python, then back them
+                with solid <span className="text-emerald-400 font-medium">REST APIs</span> and relational data models.
+                I'm driven by curiosity, drawn to agentic systems and software reliability, and motivated by shipping
+                AI into real business products.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 Beyond code, you'll find me playing guitar, diving into tech or self-improvement books, or

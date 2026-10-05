@@ -6,14 +6,15 @@ const TECHNICAL_SKILLS = [
   { name: 'Python', category: 'Languages', color: '#60a5fa', ring: 0 },
   { name: 'SQL / PostgreSQL', category: 'Languages', color: '#60a5fa', ring: 1 },
   { name: 'Java', category: 'Languages', color: '#60a5fa', ring: 0 },
-  { name: 'ML / NLP', category: 'AI/ML', color: '#34d399', ring: 1 },
-  { name: 'HuggingFace / BERT', category: 'AI/ML', color: '#34d399', ring: 0 },
-  { name: 'scikit-learn / pandas', category: 'AI/ML', color: '#34d399', ring: 1 },
-  { name: 'Angular', category: 'Frameworks', color: '#f59e0b', ring: 0 },
-  { name: 'Spring Boot', category: 'Frameworks', color: '#f59e0b', ring: 1 },
-  { name: 'Git / GitHub', category: 'Tools', color: '#a78bfa', ring: 0 },
-  { name: 'OCR (Tesseract)', category: 'Tools', color: '#a78bfa', ring: 1 },
-  { name: 'REST APIs / JWT', category: 'Tools', color: '#a78bfa', ring: 0 },
+  { name: 'LLM / RAG', category: 'AI / ML', color: '#34d399', ring: 1 },
+  { name: 'LangGraph / Agents', category: 'AI / ML', color: '#34d399', ring: 0 },
+  { name: 'Qdrant / Vector DB', category: 'AI / ML', color: '#34d399', ring: 1 },
+  { name: 'Spring Boot', category: 'Frameworks', color: '#f59e0b', ring: 0 },
+  { name: 'Angular', category: 'Frameworks', color: '#f59e0b', ring: 1 },
+  { name: 'Transformers / NLP', category: 'AI / ML', color: '#34d399', ring: 0 },
+  { name: 'XGBoost / LightGBM', category: 'AI / ML', color: '#34d399', ring: 1 },
+  { name: 'Streamlit', category: 'Tools', color: '#a78bfa', ring: 0 },
+  { name: 'Git / GitHub', category: 'Tools', color: '#a78bfa', ring: 1 },
 ];
 
 const SOFT_SKILLS = [
@@ -24,7 +25,7 @@ const SOFT_SKILLS = [
   'Time Management',
 ];
 
-const FAMILIAR = ['Docker', 'Linux', 'Jupyter', 'IntelliJ','WebStorm','Data Spell','PyCharm', 'Power BI', 'Excel', 'LaTeX', 'HTML/CSS'];
+const FAMILIAR = ['Docker', 'Linux', 'Pandas', 'NumPy', 'Scikit-learn', 'Cohere API', 'Jupyter', 'PyCharm', 'IntelliJ', 'WebStorm', 'Postman', 'Data Spell', 'Power BI', 'Excel', 'LaTeX', 'HTML/CSS'];
 
 const LEGEND = [
   { label: 'Languages', color: '#60a5fa' },

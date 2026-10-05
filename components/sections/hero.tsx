@@ -4,9 +4,9 @@ import { useEffect, useState } from 'react';
 import { ChevronDown, Sparkles, Zap, Code, Cpu, Database } from 'lucide-react';
 
 const TAGLINES = [
-  'Data Engineering Student',
-  'AI & NLP Enthusiast',
-  'Turning Data into Insights',
+  'AI Engineering Student',
+  'LLM, RAG & Agentic AI',
+  'Data Science & Back-End',
 ];
 
 const PARTICLES = Array.from({ length: 18 }, (_, i) => ({
@@ -121,23 +121,24 @@ export default function Hero() {
 
           {/* Description with tech icons */}
           <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto mb-10 animate-slide-up delay-300 leading-relaxed">
-            2nd-year Data &amp; Decisional Systems Engineering student at{' '}
-            <span className="text-emerald-400 font-medium">ENET'Com</span>
+            Final-year <span className="text-emerald-400 font-medium">Data Engineering &amp; Decision Systems</span>{' '}
+            student at <span className="text-emerald-400 font-medium">ENET'Com</span>, specialising in{' '}
+            <span className="text-emerald-400 font-medium">Data Science</span>
           </p>
 
           {/* Stats / Metrics */}
           <div className="flex flex-wrap items-center justify-center gap-6 mb-10 animate-slide-up delay-350">
             <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/5 border border-emerald-500/10">
               <Database className="w-4 h-4 text-emerald-400" />
-              <span className="text-sm text-emerald-300">6+ Databases</span>
+              <span className="text-sm text-emerald-300">16K+ Records Analyzed</span>
             </div>
             <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/5 border border-emerald-500/10">
               <Cpu className="w-4 h-4 text-teal-400" />
-              <span className="text-sm text-teal-300">10+ ML Models</span>
+              <span className="text-sm text-teal-300">50K+ Texts Processed</span>
             </div>
             <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/5 border border-emerald-500/10">
               <Code className="w-4 h-4 text-green-400" />
-              <span className="text-sm text-green-300">3+ Projects</span>
+              <span className="text-sm text-green-300">3 Internships</span>
             </div>
           </div>
 
