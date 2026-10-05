@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import { Briefcase, GraduationCap, MapPin, Calendar, CircleCheck as CheckCircle } from 'lucide-react';
+import { Briefcase, GraduationCap, MapPin, Calendar, CircleCheck as CheckCircle, Github, ExternalLink } from 'lucide-react';
 import EnetLink, { ENETCOM_URL } from '@/components/enet-link';
 
 const EXPERIENCE = [
@@ -20,6 +20,9 @@ const EXPERIENCE = [
       'Built a Streamlit interface surfacing the sources used for every generated answer',
     ],
     tags: ['Python', 'LLM', 'RAG', 'LangGraph', 'Qdrant', 'BGE-M3', 'BM25', 'RRF', 'Streamlit'],
+    links: [
+      { label: 'GitHub', href: 'https://github.com/khadijakriaa/AI_Banking_Assistant.git' },
+    ],
   },
   {
     role: 'Data Science Intern — Data Pipelines & Predictive Modeling',
@@ -36,6 +39,9 @@ const EXPERIENCE = [
       'Applied cross-validation and RandomizedSearchCV for hyperparameter tuning',
     ],
     tags: ['Python', 'Pandas', 'NumPy', 'Scikit-learn', 'XGBoost', 'LightGBM', 'Data Pipelines'],
+    links: [
+      { label: 'GitHub', href: 'https://github.com/khadijakriaa/Real-Estate-pricing-prediction.git' },
+    ],
   },
   {
     role: 'Software & AI Intern — Back-End, REST APIs & Document Processing',
@@ -89,6 +95,7 @@ function TimelineItem({
   description,
   items,
   tags,
+  links,
   align = 'left',
 }: {
   icon: React.ElementType;
@@ -101,6 +108,7 @@ function TimelineItem({
   description: string;
   items: string[];
   tags?: string[];
+  links?: { label: string; href: string }[];
   align?: 'left' | 'right';
 }) {
   const revealClass = align === 'left' ? 'reveal-left' : 'reveal-right';
@@ -166,6 +174,24 @@ function TimelineItem({
               ))}
             </div>
           )}
+
+          {links && links.length > 0 && (
+            <div className="flex flex-wrap gap-2 mt-4">
+              {links.map(({ label, href }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 px-3 py-1.5 text-sm rounded-lg border border-emerald-500/30 text-emerald-400 hover:bg-green-500/10 transition-all hover:scale-105"
+                >
+                  <Github className="w-3.5 h-3.5" />
+                  {label}
+                  <ExternalLink className="w-3 h-3 opacity-60" />
+                </a>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>
@@ -221,6 +247,7 @@ export default function ExperienceEducation() {
                 description={exp.description}
                 items={exp.achievements}
                 tags={exp.tags}
+                links={exp.links}
                 align="left"
               />
             ))}
