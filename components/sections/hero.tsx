@@ -5,9 +5,8 @@ import { ChevronDown, Sparkles, Zap, Code, Cpu, Database } from 'lucide-react';
 import SiteLink from '@/components/site-link';
 
 const TAGLINES = [
-  'AI Engineering Student',
+  'Data Science Student',
   'LLM, RAG & Agentic AI',
-  'Data Science & Back-End',
 ];
 
 const PARTICLES = Array.from({ length: 18 }, (_, i) => ({
