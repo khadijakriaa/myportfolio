@@ -9,9 +9,9 @@ const PROJECTS = [
     id: 2,
     title: 'Tunisian Dialect Classification',
     period: 'Academic Project · NLP/ML',
-    company: 'Personal Research',
+    company: 'Team Project',
     description:
-        'A sentiment analysis model fine-tuned on nearly 50,000 Tunisian Arabic dialect texts using MARBERT, deployed as an interactive demo space.',
+        'A sentiment analysis model fine-tuned on nearly 50,000 Tunisian Arabic dialect texts using MARBERT.',
     longDesc:
         'Built the full NLP pipeline — preprocessing, tokenization, classification and F1-score evaluation — around MARBERT (Arabic BERT) via transfer learning on Hugging Face. The model classifies text into positive/negative/neutral sentiments, handling code-switching between Arabic, French, and Tunisian dialect.',
     icon: Brain,

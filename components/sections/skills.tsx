@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { useTheme } from 'next-themes';
 
 const TECHNICAL_SKILLS = [
   { name: 'Python', category: 'Languages', color: '#60a5fa', ring: 0 },
@@ -42,6 +43,12 @@ function NeptuneOrbit() {
   const wrapRef = useRef<HTMLDivElement>(null);
   const rafRef = useRef<number>(0);
   const anglesRef = useRef({ r0: 0, r1: Math.PI / 4 });
+  const { resolvedTheme } = useTheme();
+  const isDarkRef = useRef(true);
+
+  useEffect(() => {
+    isDarkRef.current = resolvedTheme !== 'light';
+  }, [resolvedTheme]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -115,7 +122,7 @@ function NeptuneOrbit() {
       const br = bh / 2;
 
       // Background pill
-      const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const isDark = isDarkRef.current;
       ctx.fillStyle = isDark ? 'rgba(15,23,42,0.82)' : 'rgba(255,255,255,0.88)';
       ctx.beginPath();
       ctx.roundRect(bx, by, bw, bh, br);

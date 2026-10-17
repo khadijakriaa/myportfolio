@@ -9,19 +9,29 @@ const TAGLINES = [
   'LLM, RAG & Agentic AI',
 ];
 
-const PARTICLES = Array.from({ length: 18 }, (_, i) => ({
-  id: i,
-  x: Math.random() * 100,
-  y: Math.random() * 100,
-  size: Math.random() * 2.5 + 1,
-  dur: Math.random() * 4 + 2,
-  dly: Math.random() * 4,
-}));
+type Particle = { id: number; x: number; y: number; size: number; dur: number; dly: number };
+
+// Generated on the client only, so server and client HTML match (no hydration mismatch)
+function makeParticles(): Particle[] {
+  return Array.from({ length: 18 }, (_, i) => ({
+    id: i,
+    x: Math.random() * 100,
+    y: Math.random() * 100,
+    size: Math.random() * 2.5 + 1,
+    dur: Math.random() * 4 + 2,
+    dly: Math.random() * 4,
+  }));
+}
 
 export default function Hero() {
   const [taglineIndex, setTaglineIndex] = useState(0);
   const [displayed, setDisplayed] = useState('');
   const [typing, setTyping] = useState(true);
+  const [particles, setParticles] = useState<Particle[]>([]);
+
+  useEffect(() => {
+    setParticles(makeParticles());
+  }, []);
 
   useEffect(() => {
     const target = TAGLINES[taglineIndex];
@@ -69,7 +79,7 @@ export default function Hero() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-teal-400/10 rounded-full filter blur-[80px]" />
 
         {/* Stars / Particles */}
-        {PARTICLES.map((p) => (
+        {particles.map((p) => (
             <div
                 key={p.id}
                 className="star"
@@ -146,7 +156,7 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-slide-up delay-400">
             <button
                 onClick={scrollToAbout}
-                className="group relative px-8 py-3.5 rounded-xl  from-emerald-600 to-green-600 text-emerald-400 font-semibold text-base hover:scale-105 transition-all duration-300 overflow-hidden shadow-lg shadow-emerald-500/20"
+                className="group relative px-8 py-3.5 rounded-xl bg-gradient-to-r from-emerald-600 to-green-600 text-white font-semibold text-base hover:scale-105 transition-all duration-300 overflow-hidden shadow-lg shadow-emerald-500/20"
             >
             <span className="relative z-10 flex items-center gap-2">
               Get To Know Me

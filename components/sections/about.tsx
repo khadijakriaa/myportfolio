@@ -5,13 +5,6 @@ import Image from 'next/image';
 import { Brain, Code as Code2, Database, Guitar, BookOpen, Film, Lightbulb, Cpu } from 'lucide-react';
 import SiteLink from '@/components/site-link';
 
-const STATS = [
-  { label: 'Projects Completed', value: '5+' },
-  { label: 'Technologies', value: '12+' },
-  { label: 'Years Learning', value: '3+' },
-  { label: 'Lines of Code', value: '10k+' },
-];
-
 const INTERESTS = [
   { icon: Guitar, label: 'Guitar', color: 'text-amber-300', bg: 'bg-amber-400/10 border-amber-400/20' },
   { icon: BookOpen, label: 'Tech & Self-improvement Books', color: 'text-emerald-400', bg: 'bg-emerald-400/10 border-emerald-400/20' },

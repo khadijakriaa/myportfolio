@@ -67,7 +67,7 @@ export default function Navbar() {
               <Code2 className="w-4 h-4 text-white" />
             </div>
             <span className="font-bold text-lg font-poppins hidden sm:block">
-              <span className="text-emerald-400">Kadija</span>{' '}
+              <span className="text-emerald-400">Khadija</span>{' '}
               <span className="text-emerald-400">Kriaa</span>
 
             </span>

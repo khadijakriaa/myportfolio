@@ -2,8 +2,25 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { ThemeProvider } from '@/components/theme-provider';
 
+const SITE_URL = 'https://khadijakriaa-portfolio.me';
+const DESCRIPTION = 'Portfolio of Khadija Kriaa — Data & Decisional Systems Engineering student at ENET\'Com, specialising in Data Science. Building LLM, RAG and agentic AI applications.';
+
 export const metadata: Metadata = {
+    metadataBase: new URL(SITE_URL),
     title: 'Khadija Kriaa | Portfolio',
+    openGraph: {
+        type: 'website',
+        url: SITE_URL,
+        title: 'Khadija Kriaa | Data Science & AI Engineering',
+        description: DESCRIPTION,
+        images: [{ url: '/pdp-linkedin.png', alt: 'Khadija Kriaa' }],
+    },
+    twitter: {
+        card: 'summary',
+        title: 'Khadija Kriaa | Data Science & AI Engineering',
+        description: DESCRIPTION,
+        images: ['/pdp-linkedin.png'],
+    },
     description: 'Portfolio of Khadija Kriaa — Data & Decisional Systems Engineering student at ENET\'Com, specialising in Data Science. Building LLM, RAG and agentic AI applications.',
     // Use relative path for static export
     icons: {

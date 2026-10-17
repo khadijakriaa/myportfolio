@@ -1,5 +1,5 @@
 {
-  "name": "nextjs",
+  "name": "khadija-kriaa-portfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,8 +7,6 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "homepage": "https://khadijakriaa.github.io",
-
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
