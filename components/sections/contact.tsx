@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import { Mail, Linkedin, Github, ExternalLink, Send, MapPin, MessageCircle } from 'lucide-react';
+import { Mail, Linkedin, Github, ExternalLink, Send, MapPin, MessageCircle, Download } from 'lucide-react';
 import SiteLink from '@/components/site-link';
 
 const CONTACT_LINKS = [
@@ -161,6 +161,16 @@ export default function Contact() {
                 Send me an email
               </span>
               <div className="absolute inset-0 animate-shimmer" />
+            </a>
+
+            <a
+              href="/Khadija_Kriaa_CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 w-full py-4 rounded-2xl border-2 border-emerald-500/40 text-emerald-400 font-semibold hover:bg-emerald-500/10 hover:border-emerald-400 transition-all duration-300"
+            >
+              <Download className="w-4 h-4" />
+              Download my CV (PDF, French)
             </a>
           </div>
         </div>

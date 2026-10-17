@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { ChevronDown, Sparkles, Zap, Code, Cpu, Database } from 'lucide-react';
+import { ChevronDown, Sparkles, Zap, Code, Cpu, Database, Download } from 'lucide-react';
 import SiteLink from '@/components/site-link';
 
 const TAGLINES = [
@@ -140,11 +140,11 @@ export default function Hero() {
           <div className="flex flex-wrap items-center justify-center gap-6 mb-10 animate-slide-up delay-350">
             <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/5 border border-emerald-500/10">
               <Database className="w-4 h-4 text-emerald-400" />
-              <span className="text-sm text-emerald-300">16K+ Records Analyzed</span>
+              <span className="text-sm text-emerald-300">16K+ Listings Scraped</span>
             </div>
             <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/5 border border-emerald-500/10">
               <Cpu className="w-4 h-4 text-teal-400" />
-              <span className="text-sm text-teal-300">50K+ Texts Processed</span>
+              <span className="text-sm text-teal-300">~48K Tweets Processed</span>
             </div>
             <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/5 border border-emerald-500/10">
               <Code className="w-4 h-4 text-green-400" />
@@ -169,6 +169,16 @@ export default function Hero() {
                 className="px-8 py-3.5 border-2 border-emerald-500/40 rounded-xl text-emerald-400 font-semibold text-base hover:bg-emerald-500/10 hover:border-emerald-400 hover:scale-105 transition-all duration-300"
             >
               Get In Touch
+            </a>
+
+            <a
+                href="/Khadija_Kriaa_CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-8 py-3.5 border-2 border-emerald-500/40 rounded-xl text-emerald-400 font-semibold text-base hover:bg-emerald-500/10 hover:border-emerald-400 hover:scale-105 transition-all duration-300"
+            >
+              <Download className="w-4 h-4" />
+              Download CV
             </a>
           </div>
         </div>

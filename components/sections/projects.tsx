@@ -1,40 +1,128 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import { ExternalLink, Github, Brain, Car, Tag } from 'lucide-react';
+import { ExternalLink, Github, Brain, Car, Tag, FileSearch, Building2, ChevronRight } from 'lucide-react';
 import SiteLink, { ENETCOM_URL } from '@/components/site-link';
 
-const PROJECTS = [
+type Project = {
+  id: number;
+  title: string;
+  period: string;
+  company: string;
+  companyUrl?: string;
+  description: string;
+  longDesc: string;
+  icon: React.ElementType;
+  color: string;
+  glow: string;
+  gradient: string;
+  border: string;
+  tags: string[];
+  metrics: { value: string; label: string }[];
+  pipeline: string[];
+  highlights: string[];
+  links: { label: string; icon: React.ElementType; href: string }[];
+};
+
+const PROJECTS: Project[] = [
+  {
+    id: 1,
+    title: 'AI Assistant for Banking Circulars (RAG)',
+    period: 'Internship Project · GenAI',
+    company: 'Union Internationale de Banques (UIB)',
+    description:
+        'An internal assistant that answers staff questions about the bank\'s circulars in French, grounded in the retrieved documents and citing the exact circular and article.',
+    longDesc:
+        'Mainstream PDF extractors could not decode the circulars\' embedded fonts, so I wrote a custom extractor, then built article-aware chunking, BGE-M3 embeddings in Qdrant, hybrid dense + BM25 retrieval fused with RRF, and a LangGraph retrieve-then-generate flow behind a Streamlit interface. Every design choice was backed by an evaluation harness rather than intuition.',
+    icon: FileSearch,
+    color: 'text-emerald-400',
+    glow: 'glow-green',
+    gradient: 'from-emerald-500/20 to-teal-500/10',
+    border: 'border-emerald-500/30',
+    tags: ['Python', 'RAG', 'LLM', 'LangGraph', 'Qdrant', 'BGE-M3', 'BM25', 'Streamlit', 'Docker'],
+    metrics: [
+      { value: '282', label: 'evaluation questions' },
+      { value: '0.87', label: 'citation precision' },
+      { value: '15/15', label: 'hallucination traps refused' },
+    ],
+    pipeline: ['PDF extraction', 'Article chunking', 'BGE-M3 embeddings', 'Qdrant + BM25', 'RRF fusion', 'LangGraph + LLM', 'Streamlit'],
+    highlights: [
+      'Compared 13 chunking strategies and 2 embedding models (MRR, Recall@K)',
+      'Benchmarked candidate LLMs on evidence, citations and latency',
+      'Refuses questions about circulars that do not exist',
+      'Answers cite the source circular and article',
+    ],
+    links: [
+      { label: 'GitHub', icon: Github, href: 'https://github.com/khadijakriaa/AI_Banking_Assistant' },
+    ],
+  },
+  {
+    id: 4,
+    title: 'Tunisian Real-Estate Price Prediction',
+    period: 'Internship Project · Data Science',
+    company: 'Société Tunisienne de Banque (STB)',
+    description:
+        'An end-to-end pipeline that collects Tunisian property listings, cleans them and predicts sale prices in Tunisian dinars to support property revaluation.',
+    longDesc:
+        'Wrote scrapers for Tayara.tn and NewKey, cleaned the raw listings into a sale-only dataset, engineered features from structured fields and from listing descriptions (TF-IDF, amenity flags), then compared seven regression models in reproducible scikit-learn pipelines tuned with RandomizedSearchCV.',
+    icon: Building2,
+    color: 'text-emerald-400',
+    glow: 'glow-green',
+    gradient: 'from-emerald-500/20 to-teal-500/10',
+    border: 'border-emerald-500/30',
+    tags: ['Python', 'Web Scraping', 'Pandas', 'Scikit-learn', 'XGBoost', 'LightGBM', 'TF-IDF'],
+    metrics: [
+      { value: '16K+', label: 'listings scraped' },
+      { value: '7', label: 'models compared' },
+      { value: 'R² 0.72', label: 'best model (XGBoost)' },
+    ],
+    pipeline: ['Web scraping', 'Cleaning (4,413 sales)', 'EDA', 'TF-IDF + features', '7 models', 'XGBoost'],
+    highlights: [
+      'Scrapers for Tayara.tn and NewKey',
+      'Text features from listing descriptions',
+      'Leakage-free, reproducible pipelines',
+      'XGBoost, Gradient Boosting and LightGBM all above R² 0.71',
+    ],
+    links: [
+      { label: 'GitHub', icon: Github, href: 'https://github.com/khadijakriaa/Real-Estate-pricing-prediction' },
+    ],
+  },
   {
     id: 2,
-    title: 'Tunisian Dialect Classification',
-    period: 'Academic Project · NLP/ML',
+    title: 'Tunisian Dialect Sentiment Classification',
+    period: 'Academic Project · NLP',
     company: 'Team Project',
     description:
-        'A sentiment analysis model fine-tuned on nearly 50,000 Tunisian Arabic dialect texts using MARBERT.',
+        'A binary sentiment classifier for Tunisian dialect tweets written in both Arabic script and Arabizi (Latin script), fine-tuned from MARBERT.',
     longDesc:
-        'Built the full NLP pipeline — preprocessing, tokenization, classification and F1-score evaluation — around MARBERT (Arabic BERT) via transfer learning on Hugging Face. The model classifies text into positive/negative/neutral sentiments, handling code-switching between Arabic, French, and Tunisian dialect.',
+        'Built the preprocessing pipeline, including a CODA-style Arabizi-to-Arabic transliteration step, merged both scripts to double the training data, then fine-tuned MARBERT on Hugging Face and compared it against logistic regression and a linear SVM trained on frozen MARBERT embeddings.',
     icon: Brain,
     color: 'text-emerald-400',
     glow: 'glow-green',
     gradient: 'from-emerald-500/20 to-teal-500/10',
     border: 'border-emerald-500/30',
-    tags: ['Python', 'ML', 'NLP', 'MARBERT', 'Hugging Face', 'Sentiment Analysis', 'Arabic NLP'],
+    tags: ['Python', 'NLP', 'MARBERT', 'Hugging Face', 'Transformers', 'Arabic NLP'],
+    metrics: [
+      { value: '~48K', label: 'tweets' },
+      { value: '92%', label: 'test accuracy' },
+      { value: '0.90', label: 'macro F1' },
+    ],
+    pipeline: ['Cleaning', 'Arabizi → Arabic', 'Augmentation', 'MARBERT fine-tuning', 'Evaluation'],
     highlights: [
-      'Fine-tuned MARBERT on ~50,000 Tunisian dialect texts',
-      'Multi-class sentiment classification',
-      'Handles Arabic-French code-switching',
-      'Evaluated with F1-score',
+      'Handles both Arabic script and Arabizi',
+      'Fine-tuning beat frozen-embedding baselines (78% accuracy)',
+      'Stratified train / validation / test split',
+      'Evaluated on 9,559 held-out tweets',
     ],
     links: [
-      { label: 'GitHub', icon: Github, href: 'https://github.com/Adeeem2/Tunisian-dialect-classification.git' },
+      { label: 'GitHub', icon: Github, href: 'https://github.com/Adeeem2/Tunisian-dialect-classification' },
     ],
   },
   {
     id: 3,
     title: 'Hybrid Agent for Driving Assistance',
-    period: 'Academic Project · ML/NLP',
-    company: 'ENET\'Com',
+    period: 'Academic Project · ML / Agents',
+    company: "Team Project · ENET'Com",
     companyUrl: ENETCOM_URL,
     description:
         'A hybrid multi-agent system that detects road situations in real time using VEINS simulator data and generates natural language + textual alerts to assist drivers safely.',
@@ -46,6 +134,8 @@ const PROJECTS = [
     gradient: 'from-emerald-500/20 to-teal-500/10',
     border: 'border-emerald-500/30',
     tags: ['Python', 'ML', 'Hybrid Multi-Agent', 'BDI Agents'],
+    metrics: [],
+    pipeline: ['Vehicle data', 'ML context detection', 'Reactive layer', 'BDI reasoning', 'Alert generation'],
     highlights: [
       'Real-time road situation detection',
       'Natural language alert generation',
@@ -140,6 +230,20 @@ export default function Projects() {
                           <p className="text-muted-foreground leading-relaxed">{project.description}</p>
                           <p className="text-muted-foreground/70 text-sm leading-relaxed">{project.longDesc}</p>
 
+                          {/* Pipeline */}
+                          <div aria-label="Pipeline" className="flex flex-wrap items-center gap-1 pt-1">
+                            {project.pipeline.map((step, i) => (
+                                <span key={step} className="flex items-center gap-1">
+                                  <span className="px-2 py-0.5 text-xs rounded-md bg-emerald-500/10 border border-emerald-500/20 text-emerald-700 dark:text-emerald-300">
+                                    {step}
+                                  </span>
+                                  {i < project.pipeline.length - 1 && (
+                                      <ChevronRight className="w-3 h-3 text-muted-foreground/60" aria-hidden="true" />
+                                  )}
+                                </span>
+                            ))}
+                          </div>
+
                           {/* Tags */}
                           <div className="flex flex-wrap gap-1.5 pt-1">
                             {project.tags.map((tag) => (
@@ -153,8 +257,18 @@ export default function Projects() {
 
                         {/* Right: Highlights + Links */}
                         <div className="lg:w-72 space-y-4">
+                          {project.metrics.length > 0 && (
+                              <div className="grid grid-cols-3 gap-2">
+                                {project.metrics.map((m) => (
+                                    <div key={m.label} className="p-2.5 rounded-xl bg-background/50 border border-border/50 text-center">
+                                      <div className={`text-lg font-black leading-tight ${project.color}`}>{m.value}</div>
+                                      <div className="text-[11px] text-muted-foreground leading-snug mt-0.5">{m.label}</div>
+                                    </div>
+                                ))}
+                              </div>
+                          )}
                           <div className="p-4 rounded-xl bg-background/50 border border-border/50">
-                            <h4 className="text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-3">Key Features</h4>
+                            <h4 className="text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-3">Key Points</h4>
                             <ul className="space-y-2">
                               {project.highlights.map((h) => (
                                   <li key={h} className="flex items-start gap-2 text-sm text-muted-foreground">
