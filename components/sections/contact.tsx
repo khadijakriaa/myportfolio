@@ -170,7 +170,7 @@ export default function Contact() {
               className="flex items-center justify-center gap-2 w-full py-4 rounded-2xl border-2 border-emerald-500/40 text-emerald-600 dark:text-emerald-400 font-semibold hover:bg-emerald-500/10 hover:border-emerald-400 transition-all duration-300"
             >
               <Download className="w-4 h-4" />
-              Download my CV (PDF, French)
+              Download my CV (PDF)
             </a>
           </div>
         </div>
