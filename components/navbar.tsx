@@ -67,8 +67,8 @@ export default function Navbar() {
               <Code2 className="w-4 h-4 text-white" />
             </div>
             <span className="font-bold text-lg font-poppins hidden sm:block">
-              <span className="text-emerald-400">Khadija</span>{' '}
-              <span className="text-emerald-400">Kriaa</span>
+              <span className="text-emerald-600 dark:text-emerald-400">Khadija</span>{' '}
+              <span className="text-emerald-600 dark:text-emerald-400">Kriaa</span>
 
             </span>
           </button>
@@ -101,7 +101,7 @@ export default function Navbar() {
                 {theme === 'dark' ? (
                   <Sun className="w-4 h-4 text-amber-400" />
                 ) : (
-                  <Moon className="w-4 h-4 text-blue-500" />
+                  <Moon className="w-4 h-4 text-emerald-600" />
                 )}
               </button>
             )}

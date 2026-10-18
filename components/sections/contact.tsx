@@ -10,7 +10,7 @@ const CONTACT_LINKS = [
     value: 'kriaakhadija784@gmail.com',
     href: 'mailto:kriaakhadija784@gmail.com',
     icon: Mail,
-    color: 'text-emerald-400',
+    color: 'text-emerald-600 dark:text-emerald-400',
     bg: 'bg-emerald-500/10',
     border: 'border-emerald-500/30',
     hoverBorder: 'hover:border-emerald-400',
@@ -22,7 +22,7 @@ const CONTACT_LINKS = [
     value: 'Khadija Kriaa',
     href: 'https://www.linkedin.com/in/khadija-kriaa-579608334/',
     icon: Linkedin,
-    color: 'text-teal-400',
+    color: 'text-teal-600 dark:text-teal-400',
     bg: 'bg-teal-500/10',
     border: 'border-teal-500/30',
     hoverBorder: 'hover:border-teal-400',
@@ -34,7 +34,7 @@ const CONTACT_LINKS = [
     value: 'khadijakriaa',
     href: 'https://github.com/khadijakriaa',
     icon: Github,
-    color: 'text-green-400',
+    color: 'text-green-600 dark:text-green-400',
     bg: 'bg-green-500/10',
     border: 'border-green-500/30',
     hoverBorder: 'hover:border-green-400',
@@ -74,7 +74,7 @@ export default function Contact() {
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16 reveal">
-          <span className=" text-sm font-semibold tracking-widest uppercase mb-3 block">Let's Talk</span>
+          <span className="eyebrow mb-3 block">Let's Talk</span>
           <h2 className="text-4xl md:text-5xl font-black section-title mb-4">
             Get In <span className="text-emerald-500">Touch</span>
           </h2>
@@ -86,7 +86,7 @@ export default function Contact() {
             <div className="p-6 rounded-2xl bg-card border border-border">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center">
-                  <MessageCircle className="w-5 h-5 text-emerald-400" />
+                  <MessageCircle className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
                 </div>
                 <div>
                   <h3 className="font-bold text-foreground">Open to Opportunities</h3>
@@ -95,7 +95,7 @@ export default function Contact() {
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 I&rsquo;m a final-year Data Engineering &amp; Decision Systems student at{' '}
-                <SiteLink className="text-emerald-400 font-medium" />,
+                <SiteLink className="text-emerald-600 dark:text-emerald-400 font-medium" />,
                 specialising in Data Science. I&rsquo;m looking for a 6-month end-of-studies
                 internship (PFE) starting February 2027. If you have an opportunity or just want to
                 chat, feel free to reach out!
@@ -104,7 +104,7 @@ export default function Contact() {
 
             <div className="p-5 rounded-2xl bg-card border border-border flex items-center gap-4">
               <div className="w-10 h-10 rounded-xl bg-green-500/10 border border-green-500/20 flex items-center justify-center">
-                <MapPin className="w-5 h-5 text-green-400" />
+                <MapPin className="w-5 h-5 text-green-600 dark:text-green-400" />
               </div>
               <div>
                 <div className="font-medium text-foreground text-sm">Based in</div>
@@ -112,13 +112,13 @@ export default function Contact() {
               </div>
               <div className="ml-auto flex items-center gap-1.5">
                 <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                <span className="text-xs text-green-400">Available</span>
+                <span className="text-xs text-green-600 dark:text-green-400">Available</span>
               </div>
             </div>
 
             {/* Decorative animated element */}
-            <div className="relative p-6 rounded-2xl bg-gradient-to-br from-blue-500/10 to-indigo-500/10 border border-blue-500/20 overflow-hidden">
-              <div className="absolute -top-8 -right-8 w-24 h-24 bg-blue-500/20 rounded-full filter blur-xl animate-pulse" />
+            <div className="relative p-6 rounded-2xl bg-gradient-to-br from-emerald-500/10 to-teal-500/10 border border-emerald-500/20 overflow-hidden">
+              <div className="absolute -top-8 -right-8 w-24 h-24 bg-emerald-500/20 rounded-full filter blur-xl animate-pulse" />
               <div className="relative z-10">
                 <div className="text-2xl font-black text-gradient mb-1">Let's Build</div>
                 <div className="text-2xl font-black text-foreground">Something Amazing</div>
@@ -167,7 +167,7 @@ export default function Contact() {
               href="/Khadija_Kriaa_CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 w-full py-4 rounded-2xl border-2 border-emerald-500/40 text-emerald-400 font-semibold hover:bg-emerald-500/10 hover:border-emerald-400 transition-all duration-300"
+              className="flex items-center justify-center gap-2 w-full py-4 rounded-2xl border-2 border-emerald-500/40 text-emerald-600 dark:text-emerald-400 font-semibold hover:bg-emerald-500/10 hover:border-emerald-400 transition-all duration-300"
             >
               <Download className="w-4 h-4" />
               Download my CV (PDF, French)

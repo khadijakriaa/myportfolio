@@ -131,20 +131,20 @@ function TimelineItem({
           <div className="flex flex-wrap items-start justify-between gap-3 mb-3">
             <div>
               <div className="flex items-center gap-2 mb-1">
-                <span className="text-xs font-medium px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
+                <span className="text-xs font-medium px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400">
                   {badge}
                 </span>
               </div>
               <h3 className="text-lg font-bold text-foreground group-hover:text-gradient transition-all">{title}</h3>
               {subtitleUrl ? (
-                <SiteLink href={subtitleUrl} className="text-emerald-400 font-semibold text-sm">
+                <SiteLink href={subtitleUrl} className="text-emerald-600 dark:text-emerald-400 font-semibold text-sm">
                   {subtitle}
                 </SiteLink>
               ) : (
-                <p className="text-emerald-400 font-semibold text-sm">{subtitle}</p>
+                <p className="text-emerald-600 dark:text-emerald-400 font-semibold text-sm">{subtitle}</p>
               )}
             </div>
-            <div className="flex flex-col items-end gap-1 text-xs text-muted-foreground">
+            <div className="flex flex-col items-end gap-1 font-mono text-xs text-muted-foreground">
               <span className="flex items-center gap-1.5">
                 <Calendar className="w-3.5 h-3.5" />
                 {period}
@@ -161,7 +161,7 @@ function TimelineItem({
           <ul className="space-y-2 mb-4">
             {items.map((item) => (
               <li key={item} className="flex items-start gap-2.5 text-sm text-muted-foreground">
-                <CheckCircle className="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" />
+                <CheckCircle className="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0 mt-0.5" />
                 <span>{item}</span>
               </li>
             ))}
@@ -185,7 +185,7 @@ function TimelineItem({
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 px-3 py-1.5 text-sm rounded-lg border border-emerald-500/30 text-emerald-400 hover:bg-green-500/10 transition-all hover:scale-105"
+                  className="flex items-center gap-1.5 px-3 py-1.5 text-sm rounded-lg border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 hover:bg-green-500/10 transition-all hover:scale-105"
                 >
                   <Github className="w-3.5 h-3.5" />
                   {label}
@@ -230,7 +230,7 @@ export default function ExperienceEducation() {
 
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16 reveal">
-            <span className=" text-sm font-semibold tracking-widest uppercase mb-3 block">Experience</span>
+            <span className="eyebrow mb-3 block">Experience</span>
             <h2 className="text-4xl md:text-5xl font-black section-title mb-4">
               <span className="text-emerald-500">Internships</span>
             </h2>
@@ -261,7 +261,7 @@ export default function ExperienceEducation() {
       <section id="education" className="py-0 pb-24 md:pb-32 px-4 relative">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16 reveal">
-            <span className=" text-sm font-semibold tracking-widest uppercase mb-3 block">Academic Background</span>
+            <span className="eyebrow mb-3 block">Academic Background</span>
             <h2 className="text-4xl md:text-5xl font-black section-title mb-4">
               <span className="text-emerald-500">Education</span>
             </h2>

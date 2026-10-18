@@ -225,20 +225,20 @@ export default function Skills() {
       <section id="skills" className="py-24 md:py-32 px-4 relative overflow-hidden">
         {/* Background blobs */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <div className="absolute top-1/4 right-0 w-80 h-80 bg-indigo-500/5 rounded-full filter blur-[100px]" />
-          <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-blue-500/5 rounded-full filter blur-[80px]" />
+          <div className="absolute top-1/4 right-0 w-80 h-80 bg-emerald-500/5 rounded-full filter blur-[100px]" />
+          <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-teal-500/5 rounded-full filter blur-[80px]" />
         </div>
 
         <div className="max-w-3xl mx-auto flex flex-col items-center gap-10">
           {/* Header */}
           <div className="text-center">
-          <span className="text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-2 block">
+          <span className="eyebrow mb-2 block">
             What I Know
           </span>
             <h2 className="text-4xl md:text-5xl font-black mb-4">
-              Skills &amp; <span className="text-green-400">Expertise</span>
+              Skills &amp; <span className="text-green-600 dark:text-green-400">Expertise</span>
             </h2>
-            <div className="w-16 h-0.5 bg-blue-400 rounded-full mx-auto" />
+            <div className="w-16 h-0.5 bg-emerald-500 rounded-full mx-auto" />
           </div>
 
           {/* Orbit canvas */}
@@ -282,7 +282,7 @@ export default function Skills() {
               {FAMILIAR.map((tech) => (
                   <span
                       key={tech}
-                      className="px-2.5 py-1 text-xs bg-secondary rounded-lg text-muted-foreground border border-border hover:border-blue-500/30 hover:text-blue-400 transition-all cursor-default"
+                      className="px-2.5 py-1 text-xs bg-secondary rounded-lg text-muted-foreground border border-border hover:border-emerald-500/30 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all cursor-default"
                   >
                 {tech}
               </span>

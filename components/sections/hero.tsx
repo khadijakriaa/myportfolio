@@ -97,12 +97,12 @@ export default function Hero() {
         {/* Decorative floating elements */}
         <div className="absolute top-20 right-16 opacity-30 animate-float delay-200">
           <div className="w-12 h-12 border border-emerald-400/40 rounded-lg rotate-12 flex items-center justify-center">
-            <Sparkles className="w-5 h-5 text-emerald-400" />
+            <Sparkles className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
           </div>
         </div>
         <div className="absolute bottom-32 left-12 opacity-20 animate-float delay-700">
           <div className="w-10 h-10 border border-teal-400/40 rounded-full flex items-center justify-center">
-            <Zap className="w-4 h-4 text-teal-400" />
+            <Zap className="w-4 h-4 text-teal-600 dark:text-teal-400" />
           </div>
         </div>
 
@@ -116,13 +116,13 @@ export default function Hero() {
           {/* Name with terminal prompt style */}
           <div className="mb-6 animate-slide-up delay-100">
             <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black leading-tight">
-              <span className="text-emerald-400">Khadija Kriaa</span>
+              <span className="text-emerald-600 dark:text-emerald-400">Khadija Kriaa</span>
             </h1>
           </div>
 
           {/* Animated tagline */}
           <div className="text-xl sm:text-2xl lg:text-3xl text-muted-foreground mb-6 animate-slide-up delay-200 font-light min-h-[3rem] flex items-center justify-center gap-2">
-            <span className="text-emerald-400 font-mono text-lg">&gt;</span>
+            <span className="text-emerald-600 dark:text-emerald-400 font-mono text-lg">&gt;</span>
             <span className="text-gradient-warm font-semibold min-w-[280px] text-left">
             {displayed}
               <span className="cursor-blink">&nbsp;</span>
@@ -131,24 +131,24 @@ export default function Hero() {
 
           {/* Description with tech icons */}
           <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto mb-10 animate-slide-up delay-300 leading-relaxed">
-            <span className="text-emerald-400 font-medium">Data Engineering &amp; Decision Systems</span>{' '}
-            student at <SiteLink className="text-emerald-400 font-medium" />, specialising in{' '}
-            <span className="text-emerald-400 font-medium">Data Science</span>
+            <span className="text-emerald-600 dark:text-emerald-400 font-medium">Data Engineering &amp; Decision Systems</span>{' '}
+            student at <SiteLink className="text-emerald-600 dark:text-emerald-400 font-medium" />, specialising in{' '}
+            <span className="text-emerald-600 dark:text-emerald-400 font-medium">Data Science</span>
           </p>
 
           {/* Stats / Metrics */}
           <div className="flex flex-wrap items-center justify-center gap-6 mb-10 animate-slide-up delay-350">
             <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/5 border border-emerald-500/10">
-              <Database className="w-4 h-4 text-emerald-400" />
-              <span className="text-sm text-emerald-300">16K+ Listings Scraped</span>
+              <Database className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <span className="font-mono text-sm text-emerald-700 dark:text-emerald-300">16K+ Listings Scraped</span>
             </div>
             <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/5 border border-emerald-500/10">
-              <Cpu className="w-4 h-4 text-teal-400" />
-              <span className="text-sm text-teal-300">~48K Tweets Processed</span>
+              <Cpu className="w-4 h-4 text-teal-600 dark:text-teal-400" />
+              <span className="font-mono text-sm text-teal-700 dark:text-teal-300">~48K Tweets Processed</span>
             </div>
             <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/5 border border-emerald-500/10">
-              <Code className="w-4 h-4 text-green-400" />
-              <span className="text-sm text-green-300">3 Internships</span>
+              <Code className="w-4 h-4 text-green-600 dark:text-green-400" />
+              <span className="font-mono text-sm text-green-700 dark:text-green-300">3 Internships</span>
             </div>
           </div>
 
@@ -166,7 +166,7 @@ export default function Hero() {
 
             <a
                 href="mailto:kriaakhadija784@gmail.com"
-                className="px-8 py-3.5 border-2 border-emerald-500/40 rounded-xl text-emerald-400 font-semibold text-base hover:bg-emerald-500/10 hover:border-emerald-400 hover:scale-105 transition-all duration-300"
+                className="px-8 py-3.5 border-2 border-emerald-500/40 rounded-xl text-emerald-600 dark:text-emerald-400 font-semibold text-base hover:bg-emerald-500/10 hover:border-emerald-400 hover:scale-105 transition-all duration-300"
             >
               Get In Touch
             </a>
@@ -175,7 +175,7 @@ export default function Hero() {
                 href="/Khadija_Kriaa_CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-8 py-3.5 border-2 border-emerald-500/40 rounded-xl text-emerald-400 font-semibold text-base hover:bg-emerald-500/10 hover:border-emerald-400 hover:scale-105 transition-all duration-300"
+                className="flex items-center gap-2 px-8 py-3.5 border-2 border-emerald-500/40 rounded-xl text-emerald-600 dark:text-emerald-400 font-semibold text-base hover:bg-emerald-500/10 hover:border-emerald-400 hover:scale-105 transition-all duration-300"
             >
               <Download className="w-4 h-4" />
               Download CV

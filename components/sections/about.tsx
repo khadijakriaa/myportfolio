@@ -7,9 +7,9 @@ import SiteLink from '@/components/site-link';
 
 const INTERESTS = [
   { icon: Guitar, label: 'Guitar', color: 'text-amber-300', bg: 'bg-amber-400/10 border-amber-400/20' },
-  { icon: BookOpen, label: 'Tech & Self-improvement Books', color: 'text-emerald-400', bg: 'bg-emerald-400/10 border-emerald-400/20' },
-  { icon: Film, label: 'Sci-fi & Music-inspired Series', color: 'text-green-400', bg: 'bg-green-400/10 border-green-400/20' },
-  { icon: Cpu, label: 'Agentic AI', color: 'text-teal-400', bg: 'bg-teal-400/10 border-teal-400/20' },
+  { icon: BookOpen, label: 'Tech & Self-improvement Books', color: 'text-emerald-600 dark:text-emerald-400', bg: 'bg-emerald-400/10 border-emerald-400/20' },
+  { icon: Film, label: 'Sci-fi & Music-inspired Series', color: 'text-green-600 dark:text-green-400', bg: 'bg-green-400/10 border-green-400/20' },
+  { icon: Cpu, label: 'Agentic AI', color: 'text-teal-600 dark:text-teal-400', bg: 'bg-teal-400/10 border-teal-400/20' },
 ];
 
 const PASSIONS = [
@@ -86,16 +86,16 @@ export default function About() {
               <p className="text-muted-foreground leading-relaxed">
                 I'm a final-year{' '}
                 <span className="text-foreground font-medium">Data Engineering &amp; Decision Systems (IDSD)</span>{' '}
-                student at <SiteLink className="text-emerald-400 font-medium" />, Sfax, specialising in{' '}
-                <span className="text-emerald-400 font-medium">Data Science</span>. I&rsquo;m now looking for a 6-month
+                student at <SiteLink className="text-emerald-600 dark:text-emerald-400 font-medium" />, Sfax, specialising in{' '}
+                <span className="text-emerald-600 dark:text-emerald-400 font-medium">Data Science</span>. I&rsquo;m now looking for a 6-month
                 end-of-studies internship (PFE) starting February 2027.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 My work sits at the intersection of AI engineering and software craft — I build{' '}
-                <span className="text-emerald-400 font-medium">LLM applications</span> with{' '}
-                <span className="text-emerald-400 font-medium">RAG pipelines</span> and{' '}
-                <span className="text-emerald-400 font-medium">agentic orchestration</span> in Python, then back them
-                with solid <span className="text-emerald-400 font-medium">REST APIs</span> and relational data models.
+                <span className="text-emerald-600 dark:text-emerald-400 font-medium">LLM applications</span> with{' '}
+                <span className="text-emerald-600 dark:text-emerald-400 font-medium">RAG pipelines</span> and{' '}
+                <span className="text-emerald-600 dark:text-emerald-400 font-medium">agentic orchestration</span> in Python, then back them
+                with solid <span className="text-emerald-600 dark:text-emerald-400 font-medium">REST APIs</span> and relational data models.
                 I'm driven by curiosity, drawn to agentic systems and software reliability, and motivated by shipping
                 AI into real business products.
               </p>
@@ -132,7 +132,7 @@ export default function About() {
                   className="group flex items-center gap-4 p-4 rounded-xl bg-card border border-border hover:border-green-500/40 transition-all duration-300 cursor-default"
                 >
                   <div className="w-10 h-10 rounded-lg bg-green-500/10 border border-green-500/20 flex items-center justify-center flex-shrink-0 group-hover:bg-green-500/20 transition-colors">
-                    <Icon className="w-5 h-5 text-green-400" />
+                    <Icon className="w-5 h-5 text-green-600 dark:text-green-400" />
                   </div>
                   <div>
                     <div className="font-medium text-foreground text-sm">{label}</div>

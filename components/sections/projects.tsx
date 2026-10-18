@@ -35,7 +35,7 @@ const PROJECTS: Project[] = [
     longDesc:
         'Mainstream PDF extractors could not decode the circulars\' embedded fonts, so I wrote a custom extractor, then built article-aware chunking, BGE-M3 embeddings in Qdrant, hybrid dense + BM25 retrieval fused with RRF, and a LangGraph retrieve-then-generate flow behind a Streamlit interface. Every design choice was backed by an evaluation harness rather than intuition.',
     icon: FileSearch,
-    color: 'text-emerald-400',
+    color: 'text-emerald-600 dark:text-emerald-400',
     glow: 'glow-green',
     gradient: 'from-emerald-500/20 to-teal-500/10',
     border: 'border-emerald-500/30',
@@ -66,7 +66,7 @@ const PROJECTS: Project[] = [
     longDesc:
         'Wrote scrapers for Tayara.tn and NewKey, cleaned the raw listings into a sale-only dataset, engineered features from structured fields and from listing descriptions (TF-IDF, amenity flags), then compared seven regression models in reproducible scikit-learn pipelines tuned with RandomizedSearchCV.',
     icon: Building2,
-    color: 'text-emerald-400',
+    color: 'text-emerald-600 dark:text-emerald-400',
     glow: 'glow-green',
     gradient: 'from-emerald-500/20 to-teal-500/10',
     border: 'border-emerald-500/30',
@@ -97,7 +97,7 @@ const PROJECTS: Project[] = [
     longDesc:
         'Built the preprocessing pipeline, including a CODA-style Arabizi-to-Arabic transliteration step, merged both scripts to double the training data, then fine-tuned MARBERT on Hugging Face and compared it against logistic regression and a linear SVM trained on frozen MARBERT embeddings.',
     icon: Brain,
-    color: 'text-emerald-400',
+    color: 'text-emerald-600 dark:text-emerald-400',
     glow: 'glow-green',
     gradient: 'from-emerald-500/20 to-teal-500/10',
     border: 'border-emerald-500/30',
@@ -129,7 +129,7 @@ const PROJECTS: Project[] = [
     longDesc:
         'Combines a reactive safety agent with a deliberative BDI agent for contextual reasoning, forming a true hybrid multi-agent architecture. Multiple independent ML agents (overtaking, intersection, dangerous zones) collaborate by feeding beliefs into the BDI layer, which generates context-aware alerts via natural language generation and text-to-speech.',
     icon: Car,
-    color: 'text-emerald-400',
+    color: 'text-emerald-600 dark:text-emerald-400',
     glow: 'glow-green',
     gradient: 'from-emerald-500/20 to-teal-500/10',
     border: 'border-emerald-500/30',
@@ -176,7 +176,7 @@ export default function Projects() {
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16 reveal">
-            <span className=" text-sm font-semibold tracking-widest uppercase mb-3 block">What I've Built</span>
+            <span className="eyebrow mb-3 block">What I've Built</span>
             <h2 className="text-4xl md:text-5xl font-black section-title mb-4">
               Featured <span className="text-emerald-500">Projects</span>
             </h2>
@@ -205,7 +205,7 @@ export default function Projects() {
                             </div>
                             <div>
                               <div className="flex flex-wrap items-center gap-2 mb-1">
-                            <span className={`text-xs font-medium px-2 py-0.5 rounded-full bg-green-500/10 border border-green-500/20 ${project.color}`}>
+                            <span className={`font-mono text-xs font-medium px-2 py-0.5 rounded-full bg-green-500/10 border border-green-500/20 ${project.color}`}>
                               {project.period}
                             </span>
                                 <span className="text-xs text-muted-foreground">
@@ -234,7 +234,7 @@ export default function Projects() {
                           <div aria-label="Pipeline" className="flex flex-wrap items-center gap-1 pt-1">
                             {project.pipeline.map((step, i) => (
                                 <span key={step} className="flex items-center gap-1">
-                                  <span className="px-2 py-0.5 text-xs rounded-md bg-emerald-500/10 border border-emerald-500/20 text-emerald-700 dark:text-emerald-300">
+                                  <span className="font-mono px-2 py-0.5 text-xs rounded-md bg-emerald-500/10 border border-emerald-500/20 text-emerald-700 dark:text-emerald-300">
                                     {step}
                                   </span>
                                   {i < project.pipeline.length - 1 && (
@@ -272,7 +272,7 @@ export default function Projects() {
                             <ul className="space-y-2">
                               {project.highlights.map((h) => (
                                   <li key={h} className="flex items-start gap-2 text-sm text-muted-foreground">
-                                    <span className={`w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0 ${project.color.replace('text-', 'bg-')}`} />
+                                    <span className={`w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0 ${project.color} bg-current`} />
                                     {h}
                                   </li>
                               ))}
