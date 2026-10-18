@@ -63,7 +63,7 @@ export default function About() {
             <div className="relative w-fit mx-auto lg:mx-0">
               <div className="w-48 h-48 rounded-2xl overflow-hidden bg-emerald-500 border border-emerald-500/30">
                 <Image
-                  src="/pdp-linkedin.png"
+                  src="/profile.jpg"
                   alt="Khadija Kriaa"
                   width={192}
                   height={192}

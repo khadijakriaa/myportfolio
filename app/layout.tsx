@@ -13,13 +13,13 @@ export const metadata: Metadata = {
         url: SITE_URL,
         title: 'Khadija Kriaa | Data Science & AI Engineering',
         description: DESCRIPTION,
-        images: [{ url: '/pdp-linkedin.png', alt: 'Khadija Kriaa' }],
+        images: [{ url: '/profile.jpg', alt: 'Khadija Kriaa' }],
     },
     twitter: {
         card: 'summary',
         title: 'Khadija Kriaa | Data Science & AI Engineering',
         description: DESCRIPTION,
-        images: ['/pdp-linkedin.png'],
+        images: ['/profile.jpg'],
     },
     description: 'Portfolio of Khadija Kriaa — Data & Decisional Systems Engineering student at ENET\'Com, specialising in Data Science. Building LLM, RAG and agentic AI applications.',
     // Use relative path for static export
