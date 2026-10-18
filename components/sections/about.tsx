@@ -61,13 +61,13 @@ export default function About() {
           <div className="reveal-left space-y-6">
             {/* Avatar / Visual */}
             <div className="relative w-fit mx-auto lg:mx-0">
-              <div className="w-48 h-48 rounded-2xl overflow-hidden bg-emerald-500 border border-emerald-500/30">
+              <div className="w-48 h-48 rounded-2xl overflow-hidden bg-background dark:bg-emerald-500 border border-emerald-500/30">
                 <Image
                   src="/profile.jpg"
                   alt="Khadija Kriaa"
                   width={192}
                   height={192}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover mix-blend-multiply dark:mix-blend-normal"
                   priority
                 />
               </div>

@@ -79,9 +79,9 @@ export default function Navbar() {
               <button
                 key={href}
                 onClick={() => scrollTo(href)}
-                className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-200 ${
+                className={`relative px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-200 ${
                   activeSection === href.slice(1)
-                    ? 'text-emerald-500 bg-emerald-500/10'
+                    ? 'text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 after:absolute after:left-3 after:right-3 after:-bottom-1 after:h-0.5 after:rounded-full after:bg-emerald-500'
                     : 'text-muted-foreground hover:text-foreground hover:bg-muted/50'
                 }`}
               >
@@ -109,6 +109,8 @@ export default function Navbar() {
             {/* Mobile Menu Toggle */}
             <button
               onClick={() => setMenuOpen(!menuOpen)}
+              aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={menuOpen}
               className="md:hidden w-9 h-9 rounded-lg border border-border/50 flex items-center justify-center hover:bg-muted/50 transition-all"
             >
               {menuOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
@@ -130,7 +132,7 @@ export default function Navbar() {
               onClick={() => scrollTo(href)}
               className={`text-left px-3 py-2 rounded-lg text-sm font-medium transition-all ${
                 activeSection === href.slice(1)
-                  ? 'text-green-500 bg-green-500/10'
+                  ? 'text-emerald-600 dark:text-emerald-400 bg-emerald-500/10'
                   : 'text-muted-foreground hover:text-foreground hover:bg-muted/50'
               }`}
             >
